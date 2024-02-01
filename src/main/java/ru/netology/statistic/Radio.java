@@ -6,32 +6,32 @@ public class Radio {
     private int currentVolume;          // текущая громкость
     private int currentRadioStation;        // текущая радиостанция
 
-    public int getCurrentVolume() {
+    public int getCurrentRadioStation() {
         return currentVolume;
     }
 
-    public int getCurrentRadioStation() {
+    public void setCurrentRadioStation(int CurrentRadioStation) {  // установка радиостанции
+        if (CurrentRadioStation > 9) {
+            return;
+        }
+        if (CurrentRadioStation < 0) {
+            return;
+        }
+        this.currentRadioStation = CurrentRadioStation;
+    }
+    public int getCurrentVolume() {
         return currentRadioStation;
     }
 
-    public void setCurrentRadioStation(int newCurrentRadioStation) {  // установка радиостанции
-        if (newCurrentRadioStation > 9) {
-            return;
-        }
-        if (newCurrentRadioStation < 0) {
-            return;
-        }
-        currentRadioStation = newCurrentRadioStation;
-    }
 
-    public void setCurrentVolume(int newCurrentVolume) {
-        if (newCurrentVolume > 100) {
+    public void setCurrentVolume(int CurrentVolume) {
+        if (CurrentVolume < 0) {
             return;
         }
-        if (newCurrentVolume < 0) {
+        if (CurrentVolume > 100) {
             return;
         }
-        currentVolume = newCurrentVolume;
+        this.currentVolume = CurrentVolume;
     }
 
 
