@@ -2,9 +2,6 @@ package ru.netology.statistic;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 class RadioTest {
     Radio radio = new Radio();
 
@@ -21,10 +18,10 @@ class RadioTest {
 
     @Test
     public void increaseVolumeMoreMax() {   //прибавить громкость больше Max
-        radio.setCurrentVolume(10);
+        radio.setCurrentVolume(100);
         radio.volumeUp();
 
-        int expected = 10;
+        int expected = 100;
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);

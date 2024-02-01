@@ -36,7 +36,7 @@ public class Radio {
 
 
     public void volumeUp() {                // увеличение громкости на 1
-        if (currentVolume < 10) {
+        if (currentVolume < 100) {
             currentVolume = currentVolume + 1;
         }
     }
